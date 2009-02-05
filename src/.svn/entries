@@ -1,0 +1,30 @@
+8
+
+dir
+0
+svn+ssh://aslakjo@buri.ifi.uio.no/hom/aslakjo/svnrep/mobilyr/src
+svn+ssh://aslakjo@buri.ifi.uio.no/hom/aslakjo/svnrep/mobilyr
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+test
+dir
+
+
+
+add
+
+main
+dir
+
+
+
+add
+

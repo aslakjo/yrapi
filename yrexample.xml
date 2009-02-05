@@ -1,0 +1,81 @@
+
+<weatherdata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://api.met.no/weatherapi/locationforecast/1.4/schema" created="2008-01-30T20:01:15Z">
+	<meta>
+		<model name="YR" termin="2008-01-30T12:00:00Z" runended="2008-01-30T15:01:18Z" nextrun="2008-01-31T03:00:00Z" from="2008-01-30T21:00:00Z" to="2008-02-02T05:00:00Z"/>
+		<model name="EC.GEO.0.25" termin="2008-01-30T12:00:00Z" runended="2008-01-30T19:14:05Z" nextrun="2008-01-31T08:00:00Z" from="2008-02-02T06:00:00Z" to="2008-02-09T06:00:00Z"/>
+	</meta>
+   <product class="pointData">
+      <time datatype="forecast" from="2008-01-30T21:00:00Z" to="2008-01-30T21:00:00Z">
+         <location  altitude="500" latitude="60.1000" longitude="9.5800">
+            <windDirection id="dd" deg="265.2" name="W"/>
+            <windSpeed id="ff" mps="2.4" beaufort="2" name="Svak vind"/>
+            <temperature id="TTT" unit="celcius" value="-3.5"/>
+            <pressure id="pr" unit="hPa" value="1008.0"/>
+            <cloudiness id="NN" percent="54.9"/>
+            <fog id="FOG" percent="0.0"/>
+            <lowClouds id="LOW" percent="0.0"/>
+            <mediumClouds id="MEDIUM" percent="54.8"/>
+            <highClouds id="HIGH" percent="0.0"/>
+         </location>
+      </time>
+      <time datatype="forecast" from="2008-01-30T22:00:00Z" to="2008-01-30T22:00:00Z">
+         <location  altitude="500" latitude="60.1000" longitude="9.5800">
+            <windDirection id="dd" deg="251.9" name="W"/>
+            <windSpeed id="ff" mps="2.2" beaufort="2" name="Svak vind"/>
+            <temperature id="TTT" unit="celcius" value="-4.3"/>
+            <pressure id="pr" unit="hPa" value="1008.0"/>
+            <cloudiness id="NN" percent="6.5"/>
+            <fog id="FOG" percent="0.0"/>
+            <lowClouds id="LOW" percent="0.0"/>
+            <mediumClouds id="MEDIUM" percent="4.8"/>
+            <highClouds id="HIGH" percent="0.0"/>
+         </location>
+      </time>
+      <time datatype="forecast" from="2008-01-30T23:00:00Z" to="2008-01-30T23:00:00Z">
+         <location  altitude="500" latitude="60.1000" longitude="9.5800">
+            <windDirection id="dd" deg="239.1" name="SW"/>
+            <windSpeed id="ff" mps="2.1" beaufort="1" name="Flau vind"/>
+            <temperature id="TTT" unit="celcius" value="-5.1"/>
+            <pressure id="pr" unit="hPa" value="1007.9"/>
+            <cloudiness id="NN" percent="2.0"/>
+            <fog id="FOG" percent="0.0"/>
+            <lowClouds id="LOW" percent="0.0"/>
+            <mediumClouds id="MEDIUM" percent="0.5"/>
+            <highClouds id="HIGH" percent="2.0"/>
+         </location>
+      </time>
+      <time datatype="forecast" from="2008-01-31T00:00:00Z" to="2008-01-31T00:00:00Z">
+         <location  altitude="500" latitude="60.1000" longitude="9.5800">
+            <windDirection id="dd" deg="224.6" name="SW"/>
+            <windSpeed id="ff" mps="1.7" beaufort="1" name="Flau vind"/>
+            <temperature id="TTT" unit="celcius" value="-5.7"/>
+            <pressure id="pr" unit="hPa" value="1007.7"/>
+            <cloudiness id="NN" percent="61.3"/>
+            <fog id="FOG" percent="0.0"/>
+            <lowClouds id="LOW" percent="0.0"/>
+            <mediumClouds id="MEDIUM" percent="61.4"/>
+            <highClouds id="HIGH" percent="0.0"/>
+         </location>
+      </time>
+      <time datatype="forecast" from="2008-01-30T21:00:00Z" to="2008-01-30T22:00:00Z">
+		<location altitude="500" longitude="60.1000" latitude="9.5800">
+			<precipitation unit="mm" value="0.4"/>
+		</location>
+	</time>
+	<time datatype="forecast" from="2008-01-30T22:00:00Z" to="2008-01-30T23:00:00Z">
+		<location altitude="500" longitude="60.1000" latitude="9.5800">
+			<precipitation unit="mm" value="0.1"/>
+		</location>
+	</time>
+	<time datatype="forecast" from="2008-01-30T23:00:00Z" to="2008-01-30T00:00:00Z">
+		<location altitude="500" longitude="60.1000" latitude="9.5800">
+			<precipitation unit="mm" value="0.1"/>
+		</location>
+	</time>
+	<time datatype="forecast" from="2008-01-31T00:00:00Z" to="2008-01-31T01:00:00Z">
+		<location altitude="500" longitude="60.1000" latitude="9.5800">
+			<precipitation unit="mm" value="0.4"/>
+		</location>
+	</time>
+    </product>
+</weatherdata>

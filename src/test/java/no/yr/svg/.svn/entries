@@ -1,0 +1,30 @@
+8
+
+dir
+0
+svn+ssh://aslakjo@buri.ifi.uio.no/hom/aslakjo/svnrep/mobilyr/src/test/java/no/yr/svg
+svn+ssh://aslakjo@buri.ifi.uio.no/hom/aslakjo/svnrep/mobilyr
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+WeatherRendrerTest.java
+file
+
+
+
+add
+
+TimeSeriesRendrerTest.java
+file
+
+
+
+add
+

@@ -1,0 +1,65 @@
+8
+
+dir
+0
+svn+ssh://aslakjo@buri.ifi.uio.no/hom/aslakjo/svnrep/mobilyr/src/main/java/no/yr
+svn+ssh://aslakjo@buri.ifi.uio.no/hom/aslakjo/svnrep/mobilyr
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+svg
+dir
+
+
+
+add
+
+weather
+dir
+
+
+
+add
+
+xml
+dir
+
+
+
+add
+
+exceptions
+dir
+
+
+
+add
+
+LocationApi.java
+file
+
+
+
+add
+
+Api.java
+file
+
+
+
+add
+
+util
+dir
+
+
+
+add
+

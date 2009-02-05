@@ -1,0 +1,58 @@
+8
+
+dir
+0
+svn+ssh://aslakjo@buri.ifi.uio.no/hom/aslakjo/svnrep/mobilyr/src/test/java/no/yr
+svn+ssh://aslakjo@buri.ifi.uio.no/hom/aslakjo/svnrep/mobilyr
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+svg
+dir
+
+
+
+add
+
+weather
+dir
+
+
+
+add
+
+xml
+dir
+
+
+
+add
+
+LocationApiTest.java
+file
+
+
+
+add
+
+ApiTest.java
+file
+
+
+
+add
+
+util
+dir
+
+
+
+add
+
