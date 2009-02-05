@@ -1,0 +1,8 @@
+
+h1. Met no api in java form
+
+Using the rest like web api http://api.yr.no/weatherapi/locationforecast/1.5/
+
+Look at the tests for useage. Build useing mvn.
+
+Use at own risk, and please contribute ;)
