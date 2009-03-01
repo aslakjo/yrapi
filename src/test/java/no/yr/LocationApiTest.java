@@ -45,12 +45,12 @@ public class LocationApiTest extends TestCase {
 		throws Exception
 	{
 		LocationApi api = new LocationApi();
-		//59.9428,10.7211
+		//location for met.no at blindern oslo norway
 		api.setMoh(70);
 		api.setLongitude((float)10.7211);
 		api.setLatitude((float)59.9428);
 		
-		TimeSeries series = api.fetchTimeseries();
+		TimeSeries series = api.fetchTimeseriesForHours(6);
 		TimeSeriesRendrer rendrer = new TimeSeriesRendrer(series);
 		
 		

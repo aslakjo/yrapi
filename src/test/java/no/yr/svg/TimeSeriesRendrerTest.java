@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 
+import java.nio.CharBuffer;
 import junit.framework.TestCase;
 import no.yr.xml.parser.Weatherdata;
 
@@ -15,15 +16,23 @@ public class TimeSeriesRendrerTest extends TestCase {
 	{
 		FileReader reader;  
 		reader = new FileReader("yrexample.xml");
-		char[] buf = new char[100000];
-		reader.read(buf);
-				
+        int bufferSize = 900000;
+		char[] buf = new char[bufferSize];
+
+		int sizeRead = reader.read(buf);
+        if(sizeRead == bufferSize)
+        {
+            throw new Exception("To small a buffer to read the entire xml.");
+        }
+	
 		String xml = new String(buf);
-		xml = xml.trim();
+        xml = xml.trim();
+
+        System.out.println(xml);
 		
 		Weatherdata data = new Weatherdata(xml);
 		
-		TimeSeriesRendrer renderer = new TimeSeriesRendrer(data.getTimeSeries());
+		TimeSeriesRendrer renderer = new TimeSeriesRendrer(data.getTimeSeriesForHours(24));
 		
 		XMLOutputter out = new XMLOutputter();
 		

@@ -48,6 +48,7 @@ public class Api {
 		StringBuilder xml = new StringBuilder();
 		
 		URL query = createSearchUrl();
+        
 		InputStream stream = null;
 		try {
 			URLConnection conn = query.openConnection();

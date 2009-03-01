@@ -39,5 +39,17 @@ public class LocationApi extends Api {
 			throw new YrException("Problem giving result from yr", e);
 		}
 	}
+
+    public TimeSeries fetchTimeseriesForHours(int hours)
+    throws YrException
+    {
+        try {
+			return new Weatherdata(super.fetch()).getTimeSeriesForHours(hours);
+		} catch (JDOMException e) {
+			throw new YrException("Could not parse xml", e);
+		} catch (YrException e) {
+			throw new YrException("Problem giving result from yr", e);
+		}
+    }
 	
 }

@@ -32,5 +32,22 @@ public class TimeSeries {
 	{
 		return timeseries.containsKey(valid);
 	}
-	
+
+    public TimeSeries seriesForHours(int i) {
+
+        TimeSeries truncatedSeries = new TimeSeries();
+        Iterator<Weather> allHours = getIterator();
+
+        while(allHours.hasNext() && i > 0)
+        {
+            Weather hour = allHours.next();
+            truncatedSeries.add(hour.getValid(), hour);
+
+            i--;
+        }
+
+        return truncatedSeries;
+    }
+
+
 }

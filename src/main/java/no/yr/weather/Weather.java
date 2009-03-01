@@ -70,6 +70,10 @@ public class Weather {
 	
 	public Rain getRain()
 	{
+        if(rain == null){
+            throw new IllegalArgumentException("No rain variable initialiezed");
+        }
+
 		return rain;
 	}
 

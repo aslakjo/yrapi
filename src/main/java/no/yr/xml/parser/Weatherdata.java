@@ -52,10 +52,12 @@ public class Weatherdata {
 		
 		List<Element> times = xml.getRootElement().getChild("product").getChildren("time");
 		
-		Iterator<Element> it = times.iterator();
-		while(it.hasNext())
+		Iterator<Element> xmlTime = times.iterator();
+        int i = 0;
+		while(xmlTime.hasNext())
 		{
-			Element time = it.next();
+            i++;
+			Element time = xmlTime.next();
 			Weather weather = new Weather();
 			
 			
@@ -80,10 +82,8 @@ public class Weatherdata {
 			{
 				Weather tmp = series.get(weather.getValid());
 				weather = tmp;
-				
-				
 			}
-			
+
 			if(location.getChild("windDirection") != null)
 			{
 				weather.setClouds(new Clouds().
@@ -100,12 +100,11 @@ public class Weatherdata {
 						setSpeed(Float.valueOf(location.getChild("windSpeed").getAttributeValue("mps"))).
 						setDirection(Float.valueOf(location.getChild("windDirection").getAttributeValue("deg"))));
 				weather.setTempratur(new Temperatur().setTemperatur(Float.valueOf(location.getChild("temperature").getAttributeValue("value"))));
-				
-				
-			}else if(location.getChild("precipitation") != null)
+			}
+
+            if(location.getChild("precipitation") != null)
 			{
 				weather.setRain(new Rain().setAmount(Float.valueOf(location.getChild("precipitation").getAttributeValue("value"))));
-				
 			}
 			
 			series.add(weather.getValid(), weather);
@@ -115,6 +114,10 @@ public class Weatherdata {
 		
 		return series;
 	}
+
+    public TimeSeries getTimeSeriesForHours(int i) {
+        return getTimeSeries().seriesForHours(i);
+    }
 	
 	
 	
