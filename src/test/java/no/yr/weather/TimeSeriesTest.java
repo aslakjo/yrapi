@@ -27,13 +27,12 @@ public class TimeSeriesTest extends TestCase {
 		String xml = new String(buf);
         xml = xml.trim();
 
-        
-
 		weatherData = new Weatherdata(xml);
 	}
 
 	protected void tearDown() throws Exception {
 		super.tearDown();
+        weatherData = null;
 	}
 
 	
