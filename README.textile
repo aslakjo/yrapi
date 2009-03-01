@@ -6,3 +6,19 @@ Using the rest like web api http://api.yr.no/weatherapi/locationforecast/1.5/
 Look at the tests for useage. Build useing mvn.
 
 Use at own risk, and please contribute ;)
+
+h1. To develop use
+
+ * Maven
+ * netbans by doning <code>mvn netbeans-freeform:generate-netbeans-project</code>
+ * open the project and run the tests
+
+h2. Known bugs
+
+ * wind direction is a bit of.
+
+h2. Plans
+
+ * Fix bugs
+ * Get more accurate temrature graph
+ * Use the propability features now offerd with yrapi 1.6
