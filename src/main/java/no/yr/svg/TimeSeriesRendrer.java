@@ -67,7 +67,7 @@ public class TimeSeriesRendrer {
 		float min = 0;
 		float max = 0;
 		
-		int magnitude = -2;
+		int magnitude = -3;
 		
 		String points = "";
 		Iterator<Weather> it = series.getIterator();
@@ -84,9 +84,7 @@ public class TimeSeriesRendrer {
 			
 			left += 30;
 		}
-		System.out.println(points);
-		graf.setAttribute("points", points.trim());
-		graf.setAttribute("stroke", "red");
+		
 		
 		Element subFrame = new Element("g");
 		subFrame.setAttribute("transform", "translate(0,15)");
@@ -96,7 +94,7 @@ public class TimeSeriesRendrer {
 		zeroLine.setAttribute("y", ""+zero);
 		zeroLine.setAttribute("x", "0");
 		zeroLine.setAttribute("width", ""+ (left-15));
-		zeroLine.setAttribute("height", "1");
+		zeroLine.setAttribute("height", "0.5");
 		zeroLine.setAttribute("stroke", "black");
 		subFrame.addContent(zeroLine);
 		
@@ -106,15 +104,15 @@ public class TimeSeriesRendrer {
 			maxLine.setAttribute("y", ""+ (zero + (max*magnitude)));
 			maxLine.setAttribute("x", "0");
 			maxLine.setAttribute("width", ""+ (left-15));
-			maxLine.setAttribute("height", "1");
-			maxLine.setAttribute("stroke", "orange");
+			maxLine.setAttribute("height", "0.2");
+			maxLine.setAttribute("stroke", "green");
 			subFrame.addContent(maxLine);
 			
 			Element tempNumber = new Element("text");
 			tempNumber.setAttribute("y", "" + (zero + (max*magnitude) + 5));
 			tempNumber.setAttribute("x", "" + (left-10));
 			
-			tempNumber.setText(""+ max + "c");
+			tempNumber.setText("max "+ max + "c");
 			subFrame.addContent(tempNumber);
 			
 		}
@@ -125,20 +123,22 @@ public class TimeSeriesRendrer {
 			minLine.setAttribute("y", ""+ (zero + (min*magnitude)));
 			minLine.setAttribute("x", "0");
 			minLine.setAttribute("width", ""+ (left-15));
-			minLine.setAttribute("height", ".3");
-			minLine.setAttribute("stroke", "orange");
+			minLine.setAttribute("height", "0.2");
+			minLine.setAttribute("stroke", "green");
 			subFrame.addContent(minLine);
 			
 			Element tempNumber = new Element("text");
 			tempNumber.setAttribute("y", "" + (zero + (min*magnitude) + 5));
 			tempNumber.setAttribute("x", "" + (left-10));
 			
-			tempNumber.setText(""+ min+ "c");
+			tempNumber.setText("min "+ min + "c");
 			
 			subFrame.addContent(tempNumber);
 		}
-		
-		
+
+        graf.setAttribute("points", points.trim());
+		graf.setAttribute("stroke", "red");
+        graf.setAttribute("fill", "none");
 		
 		svg.addContent(subFrame);
 	}

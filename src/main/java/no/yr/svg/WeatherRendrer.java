@@ -56,16 +56,18 @@ public class WeatherRendrer {
 	}
 	
 	private void renderRain(Rain rain) {
-		
+
+        float rainBarHeight = rain.getAmount()*2;
+
 		//box
 		Element mmBox = new Element("rect");
 		mmBox.setAttribute("x", "3");
-		mmBox.setAttribute("y", "80");
+		mmBox.setAttribute("y", "" + (80 - rainBarHeight));
 		mmBox.setAttribute("fill", "blue");
 		
 		
 		mmBox.setAttribute("width", "25");
-		mmBox.setAttribute("height", "-" + rain.getAmount()*2);
+		mmBox.setAttribute("height", "" + rainBarHeight);
 		
 		svg.addContent(mmBox);
 		

@@ -50,7 +50,7 @@ public class LocationApiTest extends TestCase {
 		api.setLongitude((float)10.7211);
 		api.setLatitude((float)59.9428);
 		
-		TimeSeries series = api.fetchTimeseriesForHours(6);
+		TimeSeries series = api.fetchTimeseriesForHours(24);
 		TimeSeriesRendrer rendrer = new TimeSeriesRendrer(series);
 		
 		
