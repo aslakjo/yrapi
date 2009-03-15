@@ -13,12 +13,19 @@ h1. To develop use
  * netbans by doning <code>mvn netbeans-freeform:generate-netbeans-project</code>
  * open the project and run the tests
 
+h1. To run
+
+ * build the project useing <code>mvn assembly:assembly</code>
+ * run the server.rb in with jruby
+ ** changing ports by setting the enviroment variabel //PORT//
+ ** changing the yrapi jar by setting //SERVER_JAR// enviroment variabel
+
 h2. Known bugs
 
  * wind direction is a bit of.
+ * temp graph needs to be relative and have a better ui.
 
 h2. Plans
 
  * Fix bugs
- * Get more accurate temrature graph
  * Use the propability features now offerd with yrapi 1.6
