@@ -17,8 +17,8 @@ h1. To run
 
  * build the project useing <code>mvn assembly:assembly</code>
  * run the server.rb in with jruby
- ** changing ports by setting the enviroment variabel //PORT//
- ** changing the yrapi jar by setting //SERVER_JAR// enviroment variabel
+ ** changing ports by setting the enviroment variabel _PORT_
+ ** changing the yrapi jar by setting _SERVER_JAR_ enviroment variabel
 
 h2. Known bugs
 
