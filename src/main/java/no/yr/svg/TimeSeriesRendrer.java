@@ -60,7 +60,7 @@ public class TimeSeriesRendrer {
 
 	private void addTempratureGraf(Element svg) {
 		Element graf = new Element("polyline");
-		int zero = 60;
+		int zero = 90;
 		int left = 15;
 		
 		float min = 0;
@@ -136,7 +136,7 @@ public class TimeSeriesRendrer {
 
         int medianTemp = (int) (max - min) / 2;
 
-        subFrame.setAttribute("transform", "translate(0,"+ medianTemp +")");
+        subFrame.setAttribute("transform", "translate(0,"+ medianTemp * magnitude +")");
 		subFrame.addContent(graf);
 
         graf.setAttribute("points", points.trim());
