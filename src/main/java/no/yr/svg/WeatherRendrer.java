@@ -112,8 +112,9 @@ public class WeatherRendrer {
 		
 		Element rotate = new Element("g");
 		rotate.setAttribute("stroke", "green");
-		
-		rotate.setAttribute("transform", "rotate("+ (weather.getWind().getDirection() - 90) +")");
+
+        int windArrowOffset = 45 + 180;
+		rotate.setAttribute("transform", "rotate("+ (weather.getWind().getDirection() + windArrowOffset ) +")");
 		rotate.addContent(windArrow);
 		rotate.addContent(windArrow2);
 		

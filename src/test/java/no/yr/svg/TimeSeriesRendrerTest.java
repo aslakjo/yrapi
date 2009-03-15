@@ -28,7 +28,6 @@ public class TimeSeriesRendrerTest extends TestCase {
 		String xml = new String(buf);
         xml = xml.trim();
 
-        System.out.println(xml);
 		
 		Weatherdata data = new Weatherdata(xml);
 		

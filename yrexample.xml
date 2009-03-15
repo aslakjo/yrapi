@@ -7,7 +7,7 @@
    <product class="pointData">
       <time datatype="forecast" from="2008-01-30T21:00:00Z" to="2008-01-30T21:00:00Z">
          <location  altitude="500" latitude="60.1000" longitude="9.5800">
-            <windDirection id="dd" deg="265.2" name="W"/>
+            <windDirection id="dd" deg="90" name="E"/>
             <windSpeed id="ff" mps="2.4" beaufort="2" name="Svak vind"/>
             <temperature id="TTT" unit="celcius" value="-3.5"/>
             <pressure id="pr" unit="hPa" value="1008.0"/>

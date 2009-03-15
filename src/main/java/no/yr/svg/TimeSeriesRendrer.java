@@ -25,7 +25,6 @@ public class TimeSeriesRendrer {
 		Document svg = new Document(frame);
 		
 		frame.setAttribute("height", "200");
-		//frame.setAttribute("width", "2024");
 		
 		Iterator<Weather> it = series.getIterator();
 		int count = 0;
