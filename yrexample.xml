@@ -9,7 +9,7 @@
          <location  altitude="500" latitude="60.1000" longitude="9.5800">
             <windDirection id="dd" deg="90" name="E"/>
             <windSpeed id="ff" mps="2.4" beaufort="2" name="Svak vind"/>
-            <temperature id="TTT" unit="celcius" value="-3.5"/>
+            <temperature id="TTT" unit="celcius" value="10.5"/>
             <pressure id="pr" unit="hPa" value="1008.0"/>
             <cloudiness id="NN" percent="54.9"/>
             <fog id="FOG" percent="0.0"/>
@@ -35,7 +35,7 @@
          <location  altitude="500" latitude="60.1000" longitude="9.5800">
             <windDirection id="dd" deg="239.1" name="SW"/>
             <windSpeed id="ff" mps="2.1" beaufort="1" name="Flau vind"/>
-            <temperature id="TTT" unit="celcius" value="-5.1"/>
+            <temperature id="TTT" unit="celcius" value="-15.1"/>
             <pressure id="pr" unit="hPa" value="1007.9"/>
             <cloudiness id="NN" percent="2.0"/>
             <fog id="FOG" percent="0.0"/>

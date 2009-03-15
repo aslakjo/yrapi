@@ -60,7 +60,7 @@ public class TimeSeriesRendrer {
 
 	private void addTempratureGraf(Element svg) {
 		Element graf = new Element("polyline");
-		int zero = 25;
+		int zero = 60;
 		int left = 15;
 		
 		float min = 0;
@@ -86,8 +86,7 @@ public class TimeSeriesRendrer {
 		
 		
 		Element subFrame = new Element("g");
-		subFrame.setAttribute("transform", "translate(0,15)");
-		subFrame.addContent(graf);
+		
 		
 		Element zeroLine = new Element("rect");
 		zeroLine.setAttribute("y", ""+zero);
@@ -107,12 +106,12 @@ public class TimeSeriesRendrer {
 			maxLine.setAttribute("stroke", "green");
 			subFrame.addContent(maxLine);
 			
-			Element tempNumber = new Element("text");
-			tempNumber.setAttribute("y", "" + (zero + (max*magnitude) + 5));
-			tempNumber.setAttribute("x", "" + (left-10));
+			Element maxTempText = new Element("text");
+			maxTempText.setAttribute("y", "" + (zero + (max*magnitude) + 5));
+			maxTempText.setAttribute("x", "" + (left-10));
 			
-			tempNumber.setText("max "+ max + "c");
-			subFrame.addContent(tempNumber);
+			maxTempText.setText("max "+ max + "c");
+			subFrame.addContent(maxTempText);
 			
 		}
 		
@@ -126,18 +125,24 @@ public class TimeSeriesRendrer {
 			minLine.setAttribute("stroke", "green");
 			subFrame.addContent(minLine);
 			
-			Element tempNumber = new Element("text");
-			tempNumber.setAttribute("y", "" + (zero + (min*magnitude) + 5));
-			tempNumber.setAttribute("x", "" + (left-10));
+			Element mintempText = new Element("text");
+			mintempText.setAttribute("y", "" + (zero + (min*magnitude) + 5));
+			mintempText.setAttribute("x", "" + (left-10));
 			
-			tempNumber.setText("min "+ min + "c");
+			mintempText.setText("min "+ min + "c");
 			
-			subFrame.addContent(tempNumber);
+			subFrame.addContent(mintempText);
 		}
+
+        int medianTemp = (int) (max - min) / 2;
+
+        subFrame.setAttribute("transform", "translate(0,"+ medianTemp +")");
+		subFrame.addContent(graf);
 
         graf.setAttribute("points", points.trim());
 		graf.setAttribute("stroke", "red");
         graf.setAttribute("fill", "none");
+
 		
 		svg.addContent(subFrame);
 	}
