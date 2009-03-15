@@ -4,7 +4,7 @@ include WEBrick
 
 require 'svg_servlet.rb'
 
-server_port = ENV['PORT'] || 2000
+server_port = ENV['PORT'].to_i || 2000
 
 s = HTTPServer.new( :Port => server_port, :BindAddress  => "0.0.0.0" )
 

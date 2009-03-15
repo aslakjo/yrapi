@@ -66,7 +66,6 @@ public class WeatherdataTest extends TestCase {
 			{
 				current = iterator.next();
 			}
-//			System.out.println(current.getValid().getFrom().get(Calendar.HOUR) + "--" + current.getValid().getFrom().get(Calendar.DAY_OF_MONTH));
 		}
 		
 		
