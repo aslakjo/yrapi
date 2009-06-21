@@ -1,6 +1,5 @@
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.yr</groupId>
     <artifactId>mobil</artifactId>
@@ -18,7 +17,7 @@
         <dependency>
             <groupId>jdom</groupId>
             <artifactId>jdom</artifactId>
-            <version>b9</version>
+            <version>1.1</version>
         </dependency>
     </dependencies>
   
@@ -32,7 +31,7 @@
                     <target>1.5</target>
                 </configuration>
             </plugin>
-           <plugin>
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>netbeans-freeform-maven-plugin</artifactId>
                 <version>2.0</version>
@@ -53,6 +52,6 @@
                 </configuration>
             </plugin>
         </plugins>
-
     </build>
+
 </project>
