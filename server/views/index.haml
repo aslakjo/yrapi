@@ -1,0 +1,39 @@
+#main
+  %h1
+    MobilYr
+  %p.content
+    The background for this project is to make metrograms more easily
+    accessable. I have done this by using a REST like service from 
+    %a{:href => "http://met.no"}
+      met.no
+    The service is located 
+    %a{:href => "http://api.yr.no/weatherapi/documentation"}
+      here,
+    and is quite impresive!
+
+  %a{:href => "mobilyr.jar"}
+    %h2
+      The client
+  %p.content
+    The hole point of this app is to make metrograms accessable on a phone.
+    Si download the jar file from 
+    %a{:href => "mobilyr.jar"}
+      here
+    and load it into your phone. It
+    requires svg support. The app itself is only tested on a E71, and is _not_
+    user friendly. Hopfully some of you can help me with that, mayby rewrite
+    in javafx?
+
+  %h2
+    The server
+  %p.content
+    The server is a appengine ruby/rack/sinatra/haml app, on top of a java
+    api. The java api, downloads the info from met.no and gives it to a svg
+    rendrer. That in turn makes the metrogram.
+
+  %h2
+    Source
+  %p
+    All the source can be downloaded from git hub via
+    %a{:href => "http://github.com/aslakjo/mobilyrapp/tree/master"}
+      github.com/aslakjo/mobilyrapp

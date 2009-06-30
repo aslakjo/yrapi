@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'sinatra'
+require 'haml'
 
 require File.dirname(__FILE__) +  '/svg_servlet' 
 
@@ -12,6 +13,10 @@ get '/' do
     res["body"]
   rescue Exception => e
     status 400
-    "<pre>#{e.message} #{e.cause} #{e.backtrace}</pre>"
+    haml :index
   end
+end
+
+get '/mobilyr.jar' do
+  send_file "mobilyr.jar"
 end
