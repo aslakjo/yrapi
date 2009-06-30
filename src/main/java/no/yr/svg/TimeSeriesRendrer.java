@@ -81,8 +81,8 @@ public class TimeSeriesRendrer {
         Element tempFrame = new Element("g");
 
         Element zeroLine = generateZeroLine(zero, left);
-        tempFrame.addContent(generateTempGrid(left));
         tempFrame.addContent(zeroLine);
+        tempFrame.addContent(generateTempGrid(left, zero));
 
         if (max > 0) {
             Element maxLine = new Element("rect");
@@ -128,8 +128,6 @@ public class TimeSeriesRendrer {
         graf.setAttribute("stroke", "red");
         graf.setAttribute("fill", "none");
 
-        tempFrame.setAttribute("transform", "translate(0,"+((min+max)/2)*1.4 +")");
-
         svg.addContent(tempFrame);
     }
 
@@ -144,25 +142,52 @@ public class TimeSeriesRendrer {
         return zeroLine;
     }
 
-    private Element generateTempGrid(int left)
+    private Element generateTempGrid(int left, int zero)
     {
         Element grid = new Element("g");
-        
-        int temp = 15;
-        Element gridLine= new Element("rect");
-        gridLine.setAttribute("y", "" + temp * magnitude);
-        gridLine.setAttribute("x", "0");
-        gridLine.setAttribute("width", "" + (left - 15));
-        gridLine.setAttribute("height", "0.5");
-        gridLine.setAttribute("stroke", "gray");
 
-        grid.addContent(gridLine);
+        for(int placement = 10; placement < max; placement += 10 )
+        {
+            writeOneTempGridLine(zero, placement, left, grid);
+        }
+        for(int placement = -10; placement >  min; placement -= 10 )
+        {
+            writeOneTempGridLine(zero, placement, left, grid);
+        }
+
+
 
         return grid;
     }
 
-    private void moveTempGraphRelative(Element tempGraph) {
-        int medianTemp = (int) (max - min) / 2;
-        tempGraph.setAttribute("transform", "translate(0," + medianTemp * magnitude + ")");
+    private void moveTempGraphRelative(Element tempFrame) {
+        int medianTemp = (int) (min+max)/2;
+        double floatFactor = 1.4;
+        tempFrame.setAttribute("transform", "translate(0,"+(medianTemp* floatFactor) +")");
+    }
+
+    private void writeOneTempGridLine(int zero, int placement, int left, Element grid) {
+        Element gridLine = writeTempGridLine(zero, placement, left);
+        grid.addContent(writeTempGridText(left, zero, placement));
+        grid.addContent(writeTempGridText(0, zero, placement));
+        grid.addContent(gridLine);
+    }
+
+    private Element writeTempGridText(int left, int zero, int placement) {
+        Element gridText = new Element("text");
+        gridText.setAttribute("x", "" + left);
+        gridText.setAttribute("y", "" + (zero + (placement * magnitude)));
+        gridText.setText("" + placement + " c");
+        return gridText;
+    }
+
+    private Element writeTempGridLine(int zero, int placement, int left) {
+        Element gridLine = new Element("rect");
+        gridLine.setAttribute("x", "0");
+        gridLine.setAttribute("y", "" + (zero + (placement * magnitude)));
+        gridLine.setAttribute("width", "" + (left - 15));
+        gridLine.setAttribute("height", "0.2");
+        gridLine.setAttribute("stroke", "gray");
+        return gridLine;
     }
 }
