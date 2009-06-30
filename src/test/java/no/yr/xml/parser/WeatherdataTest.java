@@ -104,7 +104,7 @@ public class WeatherdataTest extends TestCase {
 		assertEquals((float)0, first.getClouds().getLow());
 		assertEquals((float)54.8, first.getClouds().getMedium());
 		assertEquals((float)54.9, first.getClouds().getTotal());
-		assertEquals((float)10.5, first.getTempratur().getTemperatur());
+		assertEquals((float)30.5, first.getTempratur().getTemperatur());
 		
 		assertEquals((float)1008.0, first.getPressure().getHpa());
 		

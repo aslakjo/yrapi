@@ -61,8 +61,6 @@ public class TimeSeriesRendrer {
         int zero = 90;
         int left = 15;
 
-
-
         String points = "";
         Iterator<Weather> it = series.getIterator();
         while (it.hasNext()) {
@@ -129,6 +127,8 @@ public class TimeSeriesRendrer {
         graf.setAttribute("points", points.trim());
         graf.setAttribute("stroke", "red");
         graf.setAttribute("fill", "none");
+
+        tempFrame.setAttribute("transform", "translate(0,"+((min+max)/2)*1.4 +")");
 
         svg.addContent(tempFrame);
     }
